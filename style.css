@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'Norse Bold';
+  src: url('../../Pobrane/Norse-Bold.otf');
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --btnColor: #596D48;
+  --focusColor: #3e6986;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+}
+
+body > *{
+  flex: 1;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  background: url(./assets/halie-west-F2927oeFqVs-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 0 1 33%;
+}
+
+header h1{
+  font-family: 'Norse Bold';
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  padding: 20px;
+  margin-top: 200px;
+  text-align: center;
+  margin-bottom: auto;
+}
+
+header h1 img{
+  width: 25%;
+}
+
+header p{
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+header a{
+  color: white;
+}
+
+/* RIGHT SIDE */
+
+
+h3{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  word-spacing: 2px;
+  font-size: 20px;
+  text-align: center;
+  min-height: 30vh;;
+}
+
+.right-side{
+  background-color: #eee;
+}
+
+form{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-left: Max(20px, 5vw);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  background-color: #fff;
+  box-shadow: 0 -5px 2px 0 #ddd, 0 5px 2px 0 #ddd;
+}
+
+form > *{
+  flex: 0 1 35%;
+  margin-inline: 20px;
+  margin-bottom: 25px;
+}
+
+form div{
+  position: relative;
+
+}
+form label{
+  
+}
+
+form input{
+  appearance: none;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  padding-left: 5px;
+  border: 1px solid lightgrey;
+  height: 2em;
+}
+
+input + span {
+  position: absolute;
+  display: none;
+  top: 100%;
+  margin-top: 2px;
+  font-size: 16px;
+  font-weight: 300;
+  color: red;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+form input:focus{
+  outline: none;
+}
+
+form input:placeholder-shown,
+form input:valid:placeholder-shown,
+form input:invalid:placeholder-shown{
+  border: 1px solid black
+}
+
+form input:not(:focus):invalid:not(:placeholder-shown) + span {
+  display: block;
+}
+
+form input:focus,
+form input:focus:placeholder-shown{
+  border: 1px solid var(--focusColor);
+  box-shadow: 0 0 1px 1px var(--focusColor);
+}
+
+form input:invalid{
+  border: 1px solid red;
+}
+
+form input:valid{
+  border: 1px solid green;
+}
+
+.submitAction{
+  position: absolute;
+  top: 100%;
+  margin: 20px;
+}
+
+.submitAction p{
+  margin-top: 30px;
+  font-weight: 400;
+  text-transform: initial;
+}
+
+.submitAction p a{
+  text-decoration: none;
+}
+
+#btnSubmit{
+  background-color: #3c667e;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 10px;
+}

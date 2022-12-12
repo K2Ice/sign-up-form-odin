@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><img src="./assets/odin-lined.png"><span>Sign-up Form</span></h1>
+    <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+  </header>
+  <div class="right-side">
+    <h3><p>This is just a training form, made to accomplish one of Odin Project's plan project. My goal is to finish this project and become junior front-end developer.</p></h3>
+      <form method="get" action="#" novalidate>
+    <div>
+      <label for="username">First Name</label>
+      <input placeholder="name" type="text" id="username" name="username" required/>
+      <span class="error">Give your firstname</span>
+  </div>
+    <div>
+      <label for="lastname">Last Name</label>
+      <input placeholder="surname" type="text" id="lastname" name="lastname" required/>
+      <span class="error">Give your lastname</span>
+    </div>
+    <div>
+      <label for="email">E-mail</label>
+      <input placeholder="odin@mail.com" type="email" id="email" name="email" required/>
+      <span class="error">E-mail has to have @ sign</span>
+    </div>
+    <div>
+      <label for="phonenumber">Phone number</label>
+      <input placeholder="123456789" type="tel" pattern='\d{9}' id="phonenumber" name="phonenumber" minlength="9" maxlength="9" required/>
+      <span class="error">Your phonenumber should have 9 digits</span>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input placeholder="password" type="password" id="password" name="password" required/>
+      <span class="error">Set your password</span>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm Password</label>
+      <input placeholder="password" type="password" id="confirmPassword" name="confirmPassword" required/>
+      <span class="error">Your passwords don't match</span>
+    </div>
+    <div class="submitAction">
+      <button id="btnSubmit">Create Account</button>
+      <p>Already have an account? <a href="#">Log in</a></p>
+  </div>
+  </form>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
